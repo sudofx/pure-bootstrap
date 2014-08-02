@@ -9,7 +9,7 @@
     // Touchscreen variable
     $touchscreen = (typeof window.ontouchstart !== 'undefined');
 
-    /* Remove header and navbar */
+    // Remove header and navbar
     if ($('.no-nav').length) {
 
       // Remove elements for no-nav full page
