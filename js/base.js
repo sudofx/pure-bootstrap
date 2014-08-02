@@ -59,11 +59,13 @@
           });
         }
       }
+
       // Set info content container element sizes
       $(window).resize(function() {
         $h = $(window).height();
         $('section').css('min-height', $h);
       });
+      
       // Set the initial size
       $(window).resize();
     }
