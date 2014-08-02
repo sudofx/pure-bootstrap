@@ -25,7 +25,8 @@
             $('.nav-menu').html(html);
         }
 
-        // Bind to the #show-nav click function to show fullscreen nav
+        // bind to the #show-nav click function to show fullscreen nav
+        // for full-no-nav template
         $('#show-nav').click(function() {
             $('#navpage').css('z-index', '1100');
             $('#navpage').removeClass('animated fadeOutUpBig');
