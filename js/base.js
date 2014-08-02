@@ -1,3 +1,8 @@
+/**
+  Theme Name: Pure Bootstrap
+  Description: Base script
+*/
+
 (function($) {
   $(document).ready(function() {
 
