@@ -1,0 +1,52 @@
+/**
+Theme Name: Pure Bootstrap
+Description: Custom stylesheet - will NOT be overwritten on updates.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@font-face {
+    font-family: 'Proxima-Light';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/Proxima-Light.woff') format('woff');
+}
+body, h1, h2, h3, h4 {
+    font-family: 'Proxima-Light', 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
+    font-weight: 200;
+}
+footer {
+    background-color: #ecf0f1;
+}
+a:hover {
+    text-decoration: none;
+}
+.navbar {
+    border-radius: 0;
+}
+.btn {
+    border-radius: 2px;
+}
+.search-btn, .btn-rounded {
+    border-radius: 50px;
+}
+.search-form {
+    border-color: #2c3e50;
+}
+.navbar-brand {
+    font-size: 3em;
+}
+.current-menu-item > a {
+    color: #18bc9c !important;
+}
+.text-accent, .navbar-brand {
+    font-family: 'Lobster', cursive;
+}
+.text-proxima {
+    font-family: 'Proxima-Light', 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
+}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1024px) {}
+@media (min-width: 1200px) {}
+
+            
