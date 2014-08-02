@@ -5,7 +5,6 @@
  * @since   Pure Bootstrap 1.0
  */
 
-
   if ( function_exists('register_sidebar') ) {
     /* First Sidebar widget */
     register_sidebar(array(
@@ -64,7 +63,9 @@
       'after_title' => '</h3>',
     ) );
 
+    /** add support for shortcodes in widgets */
     add_filter( 'widget_text', 'shortcode_unautop');
     add_filter( 'widget_text', 'do_shortcode', 11);
   }
+  
 ?>
