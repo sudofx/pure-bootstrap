@@ -1,0 +1,11 @@
+/*
+Theme Name: pure-bootstrap
+Theme URI: https://github.com/corndogcomputers/pure-bootstrap
+Author: corndogcomputers
+Author URI: https://github.com/corndogcomputers/pure-bootstrap
+Description: Pure bootstrap is a barebones bootstrap theme. Code your own damn site.
+Version: 1.0
+Text Domain: pure-bootstrap
+Tags: one-column, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, featured-image-header, full-width-template, sticky-post, threaded-comments, light, translation-ready, custom-background, facebook-photo-album-shortcodes, contact-form-shortcodes
+*/
+@import url(css/base.min.css);
