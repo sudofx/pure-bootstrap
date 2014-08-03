@@ -19,6 +19,7 @@
 
   function pure_bootstrap_contact_form( $atts ) {
     $sent = false;
+    $page_id = get_the_ID();
     $info = '';
     $result = '';
     $email = '';
@@ -138,26 +139,26 @@
     }
     // anyways, let's build the form! (remember that we're using shortcode attributes as variables with their names)
     $email_form = '<form class="contact-form" method="post" action="' . get_permalink() . '">
-      <div>
-          <input type="text" name="name" class="form-control" id="cf_name" size="50" maxlength="50" placeholder="' . $placeholder_name . '" value="' . $form_data['name'] . '" />
+      <div id="message-name">
+          <input type="text" name="name" class="form-control" id="cf-name-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_name . '" value="' . $form_data['name'] . '" />
       </div>
-      <div>
-          <input type="text" name="email" class="form-control" id="cf_email" size="50" maxlength="50" placeholder="' . $placeholder_email . '" value="' . $form_data['email'] . '" />
+      <div id="message-email">
+          <input type="text" name="email" class="form-control" id="cf-email-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_email . '" value="' . $form_data['email'] . '" />
       </div>
       <div id="message-phone">
-          <input type="text" name="phone" class="form-control" id="cf_phone" size="50" maxlength="50" placeholder="' . $placeholder_phone . '" value="' . $form_data['phone'] . '" />
+          <input type="text" name="phone" class="form-control" id="cf-phone-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_phone . '" value="' . $form_data['phone'] . '" />
       </div>
-      <div>
-          <input type="text" name="subject" class="form-control" id="cf_subject" size="50" maxlength="50" placeholder="' . $placeholder_subject . '" value="' . $subject . $form_data['subject'] . '" />
+      <div id="message-subject">
+          <input type="text" name="subject" class="form-control" id="cf-subject-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_subject . '" value="' . $subject . $form_data['subject'] . '" />
       </div>
       <div id="message-username">
-          <input type="text" name="username" class="form-control" id="cf_username" size="50" maxlength="50" placeholder="' . $placeholder_username . '" value="' . $form_data['username'] . '" />
+          <input type="text" name="username" class="form-control" id="cf-username-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_username . '" value="' . $form_data['username'] . '" />
       </div>
-      <div>
-          <textarea name="message" id="cf_message" class="form-control" cols="50" rows="8" placeholder="type your message here...">' . $form_data['message'] . '</textarea>
+      <div id="message-message">
+          <textarea name="message" id="cf-message-'. $page_id .'" class="form-control" cols="50" rows="8" placeholder="type your message here...">' . $form_data['message'] . '</textarea>
       </div>
-      <div>
-          <input id="cf_submit" type="submit" value="' . $placeholder_submit . '" class="btn btn-primary" name="send" id="cf_send" />
+      <div id="message-submit">
+          <input id="cf-submit-'. $page_id .'" type="submit" value="' . $placeholder_submit . '" class="btn btn-primary" name="send" id="cf-send-'. $page_id .'" />
       </div>
     </form>';
 
