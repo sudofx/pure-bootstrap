@@ -15,7 +15,7 @@
 
     public function get_photos( $atts )
     {
-      $photos = [];
+      $photos = array();
       $data = false;
       $atts = shortcode_atts( array(
         'album' => '',
