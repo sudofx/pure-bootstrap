@@ -18,6 +18,26 @@
   }
 
   function pure_bootstrap_contact_form( $atts ) {
+    $sent = false;
+    $info = '';
+    $result = '';
+    $email = '';
+    $subject = '';
+    $placeholder_name = '';
+    $placeholder_email = '';
+    $placeholder_phone = '';
+    $placeholder_username = '';
+    $placeholder_subject = '';
+    $placeholder_message = '';
+    $placeholder_submit = '';
+    $form_data = array(
+        'name' => '',
+        'email' => '',
+        'phone' => '',
+        'subject' => '',
+        'username' => '',
+        'message' => '',
+      );
     extract( shortcode_atts( array(
       // if you don't provide an e-mail address, the shortcode will pick the e-mail address of the admin:
       "email" => get_bloginfo( 'admin_email' ),
@@ -40,7 +60,7 @@
     if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
       $error = false;
       // set the "required fields" to check
-      $required_fields = array( "your_name", "email", "message", "subject" );
+      $required_fields = array( "name", "email", "message", "subject" );
    
       // this part fetches everything that has been POSTed, sanitizes them and lets us use them as $form_data['subject']
       foreach ( $_POST as $field => $value ) {
@@ -71,11 +91,11 @@
           // get the website's name and puts it in front of the subject
           $email_subject = "[" . get_bloginfo( 'name' ) . "] " . $form_data['subject'];
           if (isset($phone))
-            $email_subject = "[" . get_bloginfo( 'name' ) . "] " . $form_data['your_name'] . ' - ' . $phone . ' - ' . $form_data['subject'];
+            $email_subject = "[" . get_bloginfo( 'name' ) . "] " . $form_data['name'] . ' - ' . $phone . ' - ' . $form_data['subject'];
           // get the message from the form and add the IP address of the user below it
           $email_message = $form_data['message'] . "\n\nIP: " . get_the_ip();
           // set the e-mail headers with the user's name, e-mail address and character encoding
-          $headers  = "From: " . $form_data['your_name'] . " <" . $form_data['email'] . ">\n";
+          $headers  = "From: " . $form_data['name'] . " <" . $form_data['email'] . ">\n";
           $headers .= "Content-Type: text/plain; charset=UTF-8\n";
           $headers .= "Content-Transfer-Encoding: 8bit\n";
           // send the e-mail with the shortcode attribute named 'email' and the POSTed data
@@ -119,7 +139,7 @@
     // anyways, let's build the form! (remember that we're using shortcode attributes as variables with their names)
     $email_form = '<form class="contact-form" method="post" action="' . get_permalink() . '">
       <div>
-          <input type="text" name="your_name" class="form-control" id="cf_name" size="50" maxlength="50" placeholder="' . $placeholder_name . '" value="' . $form_data['your_name'] . '" />
+          <input type="text" name="name" class="form-control" id="cf_name" size="50" maxlength="50" placeholder="' . $placeholder_name . '" value="' . $form_data['name'] . '" />
       </div>
       <div>
           <input type="text" name="email" class="form-control" id="cf_email" size="50" maxlength="50" placeholder="' . $placeholder_email . '" value="' . $form_data['email'] . '" />

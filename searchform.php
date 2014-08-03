@@ -9,7 +9,11 @@
  */
 ?>
 
-<?php $search_terms = htmlspecialchars( $_GET["s"] ); ?>
+<?php
+  $search_terms = '';
+  if (isset($_GET["s"]))
+    $search_terms = htmlspecialchars( $_GET["s"] );
+?>
 <form role="form" action="<?php bloginfo('siteurl'); ?>/" method="get">
   <div class="input-group">
     <input type="text" class="form-control search-form"  name="s" placeholder="search"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
