@@ -26,11 +26,8 @@
   <div class="container">
     <div id="headerimg">
       <h1>
-        <a href="<?php echo get_option('home'); ?>" class="site-title"><?php bloginfo('name'); ?></a>
+        <a href="<?php echo get_option('home'); ?>" class="site-title"><?php bloginfo('name'); ?></a><span class="description site-slogan"> <?php bloginfo('description'); ?> </span>
       </h1>
-      <div class="description site-slogan">
-        <?php bloginfo('description'); ?>
-      </div>
     </div>
   </div>
   <style>

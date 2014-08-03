@@ -24,10 +24,9 @@
   include('inc/admin/admin-theme-options.php');
 
   /** base theme functions */
-  include('inc/func-overides.php');
-  include('inc/func-custom-functions.php');
-  include('inc/func-base.php');
-  include('inc/func-custom.php');
+  include('inc/functions/overides.php');
+  include('inc/functions/base.php');
+  include('inc/functions/custom.php');
 
   /** custom navwalker for bootstrap navbar */
   require_once('inc/wp_bootstrap_navwalker.php');
@@ -40,7 +39,7 @@
    * [fb-album album=156033841132513 limit=20]
    * [fb-album album=156033841132513 limit=20 reverse=true]
    */
-  include('inc/func-fb-album.php');
+  include('inc/functions/fb-album.php');
 
   /**
    * Will add more options later.
@@ -49,11 +48,22 @@
    * [contact] (sent to default wp-admin)
    * [contact email=user@example.com]
    */
-  include('inc/func-contact-form.php');
+  include('inc/functions/contact-form.php');
 
   /** menus and widgets */
-  include('inc/func-menus.php');
-  include('inc/func-widgets.php');
+  include('inc/functions/menus.php');
+  include('inc/functions/widgets.php');
+
+  /** If no featured image is set, get the theme image placeholder */
+  function get_thumbnail_or_placeholder() {
+    $featured_image = get_template_directory_uri() . '/img/featured-placeholder.jpg';
+    if ( has_post_thumbnail()) the_post_thumbnail('large', array('class' => 'img-responsive'));
+    else echo '<img src="'.$featured_image.'" alt="no featured image" class="img-responsive">';
+  }
+
+  function fullscreen_nav() {
+    include('inc/fullscreen-navbar.php');
+  }
 
   function show_header() {
     return get_option( 'pure_bootstrap_option', 'show_header' );

@@ -12,17 +12,13 @@
   function create_empty_custom_files( ) {
     global  $custom_dir, $custom_style, $custom_script, $custom_functions;
 
-    if ( !file_exists($custom_dir) ) {
-      mkdir($custom_dir, 0755, true);
-      file_put_contents( $custom_functions, '<?php /** Custom functions */ ?>');
-      file_put_contents( $custom_style, "
+    $default_style = "
 /*
 Theme Name: Pure Bootstrap
 Description: Custom stylesheet - will NOT be overwritten on updates.
-*/");
-
-
-      file_put_contents( $custom_script, "
+*/
+";
+    $default_script = "
 /*
 Theme Name: Pure Bootstrap
 Description: Custom script - will NOT be overwritten on updates.
@@ -34,7 +30,13 @@ Description: Custom script - will NOT be overwritten on updates.
 
   });
 }(jQuery));
-");
+";
+
+    if ( !file_exists($custom_dir) ) {
+      mkdir($custom_dir, 0755, true);
+      file_put_contents( $custom_functions, '<?php /** Custom functions */ ?>');
+      file_put_contents( $custom_style, $default_style);
+      file_put_contents( $custom_script,  $default_script);
     }
   }
 

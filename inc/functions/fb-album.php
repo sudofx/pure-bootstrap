@@ -20,7 +20,7 @@
       $atts = shortcode_atts( array(
         'album' => '',
         'limit' => 24,
-        'reverse' => False
+        'reverse' => false
       ), $atts );
 
       $url = 'http://graph.facebook.com/'.$atts['album'].'/photos?limit='.$atts['limit'];
