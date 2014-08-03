@@ -334,11 +334,11 @@ nav ul li a {
 .contact-form input {
     padding: 5px
 }
-#cf_message {
+#cf-message {
     width: 100%;
     padding: 10px
 }
-#cf_send {
+#cf-send {
     padding: 5px 10px
 }
 #message-username {
@@ -382,6 +382,10 @@ nav ul li a {
     .thumbnail > .caption {
         min-height: 460px !important;
     }
+    .textwidget > .fb-album > a > .fb-thumbnail {
+        width: 158px;
+        height: 158px
+    }
 }
 @media (min-width: 992px) {
     .half-col {
@@ -399,6 +403,10 @@ nav ul li a {
     }
     .thumbnail > .caption {
         min-height: 410px !important;
+    }
+    .textwidget > .fb-album > a > .fb-thumbnail {
+        width: 213px;
+        height: 213px
     }
 }
 @media (min-width: 1024px) {

@@ -39,8 +39,10 @@
 
     public function process_data( $photos, $html )
     {
+      $num = 1;
       if (count($photos))
       {
+        $page_id = get_the_ID();
         foreach($photos as $d)
         {
           $photo  = 10;
@@ -53,7 +55,8 @@
             $img = $d['images'][$photo]['source'];
           }
           $photo = 10;
-          $html = $html.'<a href="'.$link.'"><div data-toggle="tooltip" title="'.$alt.'" class="fb-thumbnail" style="background: url('.$img.') no-repeat center center; background-size: cover;"></div></a>';
+          $html = $html.'<a href="'.$link.'"><div data-toggle="tooltip" title="'.$alt.'" id="thumb-'.$page_id.'-'.$num.'"class="fb-thumbnail" style="background: url('.$img.') no-repeat center center; background-size: cover;"></div></a>';
+          $num++;
         }
       }
       return $html;
