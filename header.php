@@ -19,8 +19,9 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php $show_header = False; /** <-- need to work in a user option here. */ ?>
-<?php if ($show_header): ?>
+
+
+<?php if ( show_header() ): ?>
 <div id="header">
   <div class="container">
     <div id="headerimg">

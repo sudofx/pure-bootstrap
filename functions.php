@@ -20,8 +20,8 @@
   $custom_script          = $custom_dir . '/'. $custom_script_file;
   $custom_functions       = $custom_dir . '/'. $custom_functions_file;
 
-  /** admin settings */
-  include('inc/admin/admin-custom-editor.php');
+  /** theme options */
+  include('inc/admin/admin-theme-options.php');
 
   /** base theme functions */
   include('inc/func-overides.php');
@@ -54,5 +54,9 @@
   /** menus and widgets */
   include('inc/func-menus.php');
   include('inc/func-widgets.php');
+
+  function show_header() {
+    return get_option( 'pure_bootstrap_option', 'show_header' );
+  }
 
 ?>
