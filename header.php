@@ -19,20 +19,25 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!--
+<?php $show_header = False; /** <-- need to work in a user option here. */ ?>
+<?php if ($show_header): ?>
 <div id="header">
- <div class="container">
-   <div id="headerimg">
-     <h1>
-      <a href="<?php echo get_option('home'); ?>"> <?php bloginfo('name'); ?></a>
-     </h1>
-       <div class="description">
-         <?php bloginfo('description'); ?>
-       </div>
+  <div class="container">
+    <div id="headerimg">
+      <h1>
+        <a href="<?php echo get_option('home'); ?>" class="site-title"><?php bloginfo('name'); ?></a>
+      </h1>
+      <div class="description site-slogan">
+        <?php bloginfo('description'); ?>
+      </div>
     </div>
- </div>
+  </div>
+  <style>
+    .navbar-brand { display: none !important; }
+  </style>
 </div>
--->
+<?php endif ?>
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,7 +64,9 @@
         );
       ?>
     </div>
+  </div>
 </nav>
+
 <div id="container">
 
 
