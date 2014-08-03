@@ -8,6 +8,7 @@
  * @since   Pure Bootstrap 1.0
  */
 ?>
+
 <?php $search_terms = htmlspecialchars( $_GET["s"] ); ?>
 <form role="form" action="<?php bloginfo('siteurl'); ?>/" method="get">
   <div class="input-group">

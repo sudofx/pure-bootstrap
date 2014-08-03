@@ -1,8 +1,8 @@
 /*
 Theme Name: pure-bootstrap
-Theme URI: http://corndogcomputers.com
+Theme URI: https://github.com/corndogcomputers/pure-bootstrap
 Author: corndogcomputers
-Author URI: http://corndogcomputers.com
+Author URI: https://github.com/corndogcomputers/pure-bootstrap
 Description: Pure bootstrap is a barebones bootstrap theme. Code your own damn site.
 Version: 1.0
 Text Domain: pure-bootstrap
@@ -122,6 +122,9 @@ nav ul li a {
 [placeholder]:focus::-webkit-input-placeholder {
     transition: opacity .2s .2s ease;
     opacity: 0
+}
+.btn {
+    min-width: 60px;
 }
 .btn-rounded {
     border-radius: 50px!important;
@@ -372,6 +375,9 @@ nav ul li a {
         width: 130px;
         height: 130px
     }
+    .thumbnail > .caption {
+        min-height: 460px !important;
+    }
 }
 @media (min-width: 992px) {
     .half-col {
@@ -381,11 +387,14 @@ nav ul li a {
         min-height: 450px!important
     }
     .the-excerpt {
-        min-height: 230px
+        min-height: 260px
     }
     .fb-thumbnail {
         width: 200px;
         height: 200px
+    }
+    .thumbnail > .caption {
+        min-height: 410px !important;
     }
 }
 @media (min-width: 1024px) {
@@ -395,6 +404,9 @@ nav ul li a {
     .icons img {
         width: 20px;
         height: 20px
+    }
+    .thumbnail > .caption {
+        min-height: 410px !important;
     }
 }
 @media (min-width: 1025px) {
@@ -428,5 +440,8 @@ nav ul li a {
     .fb-thumbnail {
         width: 240px;
         height: 240px
+    }
+    .thumbnail > .caption {
+        min-height: 360px !important;
     }
 }

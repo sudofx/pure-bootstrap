@@ -51,7 +51,8 @@ Description: Custom script - will NOT be overwritten on updates.
     $theme_dir_uri = get_template_directory_uri();
     
     /** include the users custom functions */
-    if ( file_exists($custom_functions) ) include( $custom_functions );
+    if ( file_exists($custom_functions) )
+      include( $custom_functions );
 
     /** Custom script and stylesheet for the user to edit. */
     if ( file_exists($custom_style) )
