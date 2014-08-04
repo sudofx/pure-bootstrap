@@ -128,6 +128,9 @@ nav ul li a {
     padding-left: 16px!important;
     padding-right: 16px!important
 }
+.search-btn {
+    min-width: 0 !important;
+}
 .padding-top-10 {
     padding-top: 10px
 }
