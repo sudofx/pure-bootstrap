@@ -13,6 +13,7 @@ get_header(); ?>
     <?php while(have_posts()): the_post() ?>
       <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="padding-top-20 padding-bottom-20">
+          <?php remove_filter ('the_content', 'wpautop'); ?>
           <?php the_content(); ?>
         </div>
       </div>

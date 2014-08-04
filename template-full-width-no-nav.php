@@ -16,6 +16,7 @@ get_header(); ?>
     </div>
     <?php while(have_posts()): the_post() ?>
       <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php remove_filter ('the_content', 'wpautop'); ?>
         <?php the_content(); ?>
       </div>
     <?php endwhile; ?>

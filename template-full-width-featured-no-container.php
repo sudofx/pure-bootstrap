@@ -16,6 +16,7 @@ get_header(); ?>
           <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'larger'); ?>
           <div id="featured-image" class="full-width-featured-img-no-container" style="background: url(<?php echo $image_url[0];?>)"></div>
         <?php endif; ?>
+        <?php remove_filter ('the_content', 'wpautop'); ?>
         <?php the_content(); ?>
       </div>
     <?php endwhile; ?>

@@ -19,6 +19,7 @@ get_header(); ?>
             <?php endif; ?>
           </div>
         <div class="padding-top-20 padding-bottom-20">
+          <?php remove_filter ('the_content', 'wpautop'); ?>
           <?php the_content(); ?>
         </div>
       </div>

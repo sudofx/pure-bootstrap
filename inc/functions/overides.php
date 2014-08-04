@@ -34,9 +34,5 @@
     * Changes double line-breaks in the text into HTML paragraphs (<p>...</p>).
     * WordPress uses it to filter the content and the excerpt.
   */
-  if ( function_exists('remove_filter') ) {
-    remove_filter( 'the_content', 'wpautop' );
-    remove_filter( 'the_excerpt', 'wpautop' );
-  }
 
 ?>
