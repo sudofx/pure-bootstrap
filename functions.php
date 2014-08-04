@@ -20,6 +20,9 @@
   $custom_script          = $custom_dir . '/'. $custom_script_file;
   $custom_functions       = $custom_dir . '/'. $custom_functions_file;
 
+  /** custom navwalker for bootstrap navbar */
+  require_once('inc/wp_bootstrap_navwalker.php');
+
   /** theme options */
   include('inc/admin/admin-theme-options.php');
 
@@ -28,8 +31,7 @@
   include('inc/functions/base.php');
   include('inc/functions/custom.php');
 
-  /** custom navwalker for bootstrap navbar */
-  require_once('inc/wp_bootstrap_navwalker.php');
+  
 
   /** shortcodes
   ========================================================================== */
@@ -42,8 +44,6 @@
   include('inc/functions/fb-album.php');
 
   /**
-   * Will add more options later.
-   *
    * Contact Form shortcode examples:
    * [contact] (sent to default wp-admin)
    * [contact email=user@example.com]
@@ -61,10 +61,12 @@
     else echo '<img src="'.$featured_image.'" alt="no featured image" class="img-responsive">';
   }
 
+  /** This is the nave for the full-screen-no-nav template */
   function fullscreen_nav() {
     include('inc/fullscreen-navbar.php');
   }
 
+  /** Theme option to show header. */
   function show_header() {
     return get_option( 'pure_bootstrap_option', 'show_header' );
   }

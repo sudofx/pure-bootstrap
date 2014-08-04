@@ -5,6 +5,7 @@
  * @package Pure Bootstrap
  * @since   Pure Bootstrap 1.0
  */
+
   function get_the_ip() {
     if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
       return $_SERVER["HTTP_X_FORWARDED_FOR"];

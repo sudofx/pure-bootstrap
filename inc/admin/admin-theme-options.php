@@ -1,4 +1,10 @@
 <?php
+/**
+ * Theme: Pure Bootstrap
+ * @package Pure Bootstrap
+ * @since   Pure Bootstrap 1.0
+ */
+
   global $custom_style, $custom_script;
   class ThemeOptions
   {
