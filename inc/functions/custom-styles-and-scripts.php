@@ -10,7 +10,7 @@
   * exist, it will create it and create the custom files for the user to edit.
   */
   function create_empty_custom_files( ) {
-    global  $custom_dir, $custom_style, $custom_script, $custom_functions;
+    global $custom_dir, $custom_style, $custom_script, $custom_functions;
 
     $default_style = "
 /*
@@ -46,11 +46,10 @@ Description: Custom script - will NOT be overwritten on updates.
   */
   function custom_scripts( ) {
 
-    global $custom_dir_name, $custom_style_file, $custom_script_file, $custom_style, $custom_script, $custom_functions;
+    global $theme_dir_uri, $custom_dir_name, $custom_style_file, $custom_script_file, $custom_style, $custom_script, $custom_functions;
 
     /** create empty script and stylesheet files */
     create_empty_custom_files();
-    $theme_dir_uri = get_template_directory_uri();
     
     /** include the users custom functions */
     if ( file_exists($custom_functions) )

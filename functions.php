@@ -8,6 +8,7 @@
  */
   
   /** custom folder */
+  $theme_dir_uri = get_template_directory_uri();
   $custom                 = 'custom';
   $custom_dir_name        = '@' . $custom;
   $custom_dir             = get_template_directory() . '/' . $custom_dir_name;
@@ -23,19 +24,55 @@
   /** custom navwalker for bootstrap navbar */
   require_once('inc/wp_bootstrap_navwalker.php');
 
-  /** theme options */
-  include('inc/admin/admin-theme-options.php');
+  /** admin theme options */
+  include('inc/admin/theme-options.php');
 
-  /** base theme functions */
-  include('inc/functions/overides.php');
-  include('inc/functions/base.php');
-  include('inc/functions/custom.php');
+  /** styles and script */
+  include('inc/functions/base-styles-and-scripts.php');
+  include('inc/functions/custom-styles-and-scripts.php');
 
   
+  /** start basic wp overides
+  ========================================================================== */
+  // delay feed update
+  function publish_later_on_feed($where) {
+    global $wpdb;
+    if (is_feed()) {
+      // timestamp in WP-format
+      $now = gmdate('Y-m-d H:i:s');
+      // value for wait; + device
+      $wait = '5'; // integer
+      // http://dev.mysql.com/doc/refman/5.0/en/date-and-time-functions.html#function_timestampdiff
+      $device = 'MINUTE'; // MINUTE, HOUR, DAY, WEEK, MONTH, YEAR
+      // add SQL-sytax to default $where
+      $where .= " AND TIMESTAMPDIFF($device, $wpdb->posts.post_date_gmt, '$now') > $wait ";
+    }
+    return $where;
+  }
+  
+  /* Add feautured image support to theme */
+  if (function_exists('add_theme_support')) {
+    add_theme_support('post-thumbnails');
+  }
 
-  /** shortcodes
+
+  /* Delay xml feed update after new posts */
+  if (function_exists('add_filter')) {
+    add_filter('posts_where', 'publish_later_on_feed');
+  }
+
+
+  // Add a larger thumbnail
+  if (function_exists('add_image_size')) {
+    add_image_size( 'larger', 1920, 1080, true );
+  }
+  /** end overides
   ========================================================================== */
 
+
+
+  /** start shortcodes
+  ========================================================================== */
   /**
    * Facebook album shortcode examples:
    * [fb-album album=156033841132513 limit=20]
@@ -49,10 +86,14 @@
    * [contact email=user@example.com]
    */
   include('inc/functions/contact-form.php');
+  /** end shortcodes
+  ========================================================================== */
+
 
   /** menus and widgets */
   include('inc/functions/menus.php');
   include('inc/functions/widgets.php');
+
 
   /** If no featured image is set, get the theme image placeholder */
   function get_thumbnail_or_placeholder() {
@@ -61,10 +102,12 @@
     else echo '<img src="'.$featured_image.'" alt="no featured image" class="img-responsive">';
   }
 
+
   /** This is the nave for the full-screen-no-nav template */
   function fullscreen_nav() {
     include('inc/fullscreen-navbar.php');
   }
+
 
   /** Theme option to show header. */
   function show_header() {
