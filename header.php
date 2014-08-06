@@ -22,21 +22,29 @@
 
 
 <?php if ( show_header() ): ?>
-<div id="header">
+<header id="header">
   <div class="container">
     <div id="headerimg">
       <h1>
-        <a href="<?php echo get_option('home'); ?>" class="site-title"><?php bloginfo('name'); ?></a><span class="description site-slogan"> <?php bloginfo('description'); ?> </span>
+        <a href="<?php echo get_option('home'); ?>" class="site-title"><?php bloginfo('name'); ?></a>
       </h1>
+      <div class="description site-slogan">
+        <?php bloginfo('description'); ?>
+      </div>
     </div>
   </div>
   <style>
     .navbar-brand { display: none !important; }
   </style>
-</div>
+</header>
 <?php endif ?>
 
-<nav class="navbar navbar-default" role="navigation">
+<?php if ( show_header() ): ?>
+  <div id="nav-container" class="container">
+    <nav class="navbar navbar-default" role="navigation">
+<?php else: ?>
+  <nav class="navbar navbar-default" role="navigation">
+<?php endif ?>
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -48,22 +56,25 @@
       </button>
       <a class="navbar-brand site-title" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
     </div>
-      <?php
-        wp_nav_menu( array(
-          'menu'              => 'primary',
-          'theme_location'    => 'primary',
-          'depth'             => 2,
-          'container'         => 'div',
-          'container_class'   => 'collapse navbar-collapse',
-          'container_id'      => 'navbarCollapse',
-          'menu_class'        => 'nav navbar-nav',
-          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-          'walker'            => new wp_bootstrap_navwalker())
-        );
-      ?>
+    <?php
+      wp_nav_menu( array(
+        'menu'              => 'primary',
+        'theme_location'    => 'primary',
+        'depth'             => 2,
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'navbarCollapse',
+        'menu_class'        => 'nav navbar-nav',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker())
+      );
+    ?>
     </div>
   </div>
 </nav>
+<?php if ( show_header() ): ?>
+  </div>
+<?php endif ?>
 
 <div id="container">
 

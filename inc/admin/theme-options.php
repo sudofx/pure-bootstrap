@@ -114,7 +114,7 @@
 
     /** Register and add settings */
     public function page_init()
-    {        
+    {
       register_setting(
         'pure_bootstrap_option_group', // Option group
         'pure_bootstrap_option', // Option name
@@ -126,7 +126,7 @@
         'General Options', // Title
         array( $this, 'print_section_info' ), // Callback
         'my-setting-admin' // Page
-      );  
+      );
 
       add_settings_field(
         'pure_bootstrap_show_header', // ID
@@ -134,7 +134,7 @@
         array( $this, 'show_header_callback' ), // Callback
         'my-setting-admin', // Page
         'setting_section_id' // Section           
-      );      
+      );
     }
 
     /**

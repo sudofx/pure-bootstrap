@@ -59,7 +59,7 @@ table {
   padding-bottom: 10px;
 }
 .description {
-  font-size: 0.8em;
+  font-size: 1.4em;
   padding-bottom: 10px;
 }
 body, html {
@@ -202,6 +202,10 @@ nav ul li a {
 }
 .margin-bottom-60 {
   margin-bottom: 60px
+}
+#nav-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 textarea {
   padding-left: 6px !important;
@@ -405,6 +409,13 @@ article {
   }
 }
 @media (min-width: 768px) {
+  #nav-container {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  #nav-container > .navbar {
+    border-radius: 4px !important;
+  }
   .half-col {
     max-height: 120px
   }

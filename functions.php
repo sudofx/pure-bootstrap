@@ -109,6 +109,12 @@
   }
 
 
+  /** Use CDNs */
+  function use_cdn() {
+    return get_option( 'pure_bootstrap_option', 'use_cdn' );
+  }
+
+
   /** Theme option to show header. */
   function show_header() {
     return get_option( 'pure_bootstrap_option', 'show_header' );
