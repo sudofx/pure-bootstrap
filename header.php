@@ -34,7 +34,7 @@
     </div>
   </div>
   <style>
-    .navbar-brand { display: none !important; }
+    .navbar-brand { display: none }
   </style>
 </header>
 <?php endif ?>

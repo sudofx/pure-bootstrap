@@ -63,8 +63,8 @@ table {
   padding-bottom: 10px;
 }
 body, html {
-  margin: 0!important;
-  padding: 0!important;
+  margin: 0;
+  padding: 0;
   width: 100%!important;
   height: 100%!important
 }

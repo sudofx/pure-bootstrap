@@ -28,13 +28,13 @@
         // bind to the #show-nav click function to show fullscreen nav
         // for full-no-nav template
         $('#show-nav').click(function() {
-            $('#navpage').css('z-index', '1100');
-            $('#navpage').removeClass('animated fadeOutUpBig');
-            $('#navpage').addClass('bg-primary');
-            $('#navpage').addClass('animated bounceInDown');
-            window.setTimeout(function() {
-                $('section').css('display', 'none');
-            }, 500);
+          $('#navpage').css('z-index', '1100');
+          $('#navpage').removeClass('animated fadeOutUpBig');
+          $('#navpage').addClass('bg-primary');
+          $('#navpage').addClass('animated bounceInDown');
+          window.setTimeout(function() {
+              $('section').css('display', 'none');
+          }, 500);
         });
 
         function closeNav() {
@@ -69,6 +69,27 @@
       // Set the initial size
       $(window).resize();
     }
+
+    if ( $('header').length ) {
+      $(window).resize(function() {
+        $w = $(window).width();
+        if ($w <= 768) {
+          $('.navbar').addClass('navbar-fixed-top');
+          $('.navbar-brand').css('display', 'block');
+          $('header').css('display', 'none');
+          $('body').css('margin-top', '39px');
+        } else {
+          $('.navbar').removeClass('navbar-fixed-top');
+          $('.navbar-brand').css('display', 'none');
+          $('header').css('display', 'block');
+          $('body').css('margin-top', '0');
+        }
+      });
+      
+      // Set the initial size
+      $(window).resize();
+    }
+    
 
     // Add form-control class to ID comment
     if ($('#comment').length)
