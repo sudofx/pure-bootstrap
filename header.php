@@ -40,7 +40,7 @@
 <?php endif ?>
 
 <?php if ( show_header() ): ?>
-  <div id="nav-container" class="container">
+  <div id="nav-container" class="container margin-bottom-20">
     <nav class="navbar navbar-default" role="navigation">
 <?php else: ?>
   <nav class="navbar navbar-default" role="navigation">

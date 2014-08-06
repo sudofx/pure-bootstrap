@@ -46,14 +46,10 @@ Description: Custom script - will NOT be overwritten on updates.
   */
   function custom_scripts( ) {
 
-    global $theme_dir_uri, $custom_dir_name, $custom_style_file, $custom_script_file, $custom_style, $custom_script, $custom_functions;
+    global $theme_dir_uri, $custom_dir_name, $custom_style_file, $custom_script_file, $custom_style, $custom_script;
 
     /** create empty script and stylesheet files */
     create_empty_custom_files();
-    
-    /** include the users custom functions */
-    if ( file_exists($custom_functions) )
-      include( $custom_functions );
 
     /** Custom script and stylesheet for the user to edit. */
     if ( file_exists($custom_style) )

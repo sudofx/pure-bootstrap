@@ -21,6 +21,10 @@
   $custom_script          = $custom_dir . '/'. $custom_script_file;
   $custom_functions       = $custom_dir . '/'. $custom_functions_file;
 
+  /** include the users custom functions */
+  if ( file_exists($custom_functions) )
+    include( $custom_functions );
+  
   /** custom navwalker for bootstrap navbar */
   require_once('inc/wp_bootstrap_navwalker.php');
 

@@ -8,7 +8,7 @@
   /* Que third party scripts and stylesheets */
   function third_party_scripts() {
     
-    global $theme_dir_uri, $custom, $custom_dir_name, $custom_dir;
+    global $theme_dir_uri, $custom, $custom_dir_name, $custom_dir, $use_cdn;
 
     $custom_bootstrap_stylesheet  = $custom.'.bootstrap.css';
     $custom_bootstrap_script      = $custom.'.bootstrap.js';
@@ -25,8 +25,7 @@
     $cdn_animate_style  = '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css';
     $cdn_fa_style       = '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css';
 
-    $use_cdn = True;
-
+    /** set $use_cdn in custom_functions.php */
     if ($use_cdn) {
       $bs_style       = $cdn_bs_style;
       $bs_script      = $cdn_bs_script;
