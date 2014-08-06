@@ -106,7 +106,7 @@
       if ($w <= 768) {
         $('.navbar').addClass('navbar-fixed-top');
         $('.navbar').css('opacity', '0.96');
-        $('body').css('margin-top', '59px');
+        $('body').css('margin-top', '56px');
       } else {
         $('.navbar').removeClass('navbar-fixed-top');
         $('.navbar').css('opacity', '1');
