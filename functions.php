@@ -114,4 +114,19 @@
     return get_option( 'pure_bootstrap_option', 'show_header' );
   }
 
+  /*
+   * Custom excerpt length
+   * ======================================================================= */
+  function custom_excerpt_length( $length ) {
+    return 35;
+  }
+
+  /*
+   * Que functions
+   * ======================================================================= */
+  if (function_exists('add_filter')) {
+    /* Shorten the excerpt length */
+    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+  }
+
 ?>

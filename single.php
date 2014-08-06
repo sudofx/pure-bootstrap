@@ -17,25 +17,25 @@ get_header(); ?>
             <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
           </div>
         <?php endif; ?>
-          <h2 ><?php the_title(); ?></h2>
-          <div class="padding-top-20">
+          <article>
+            <h2 ><?php the_title(); ?></h2>
             <?php the_content(); ?>
-          </div>
-          <div class="entry-date">
-            By<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-              <?php printf( __( ' %s', 'pure-bootstrap' ), get_the_author() ); ?>
-            </a> on <?php echo get_the_date(); ?>
-          </div>
-          <div class="post-tags">
-            <?php
-              $posttags = get_the_tags();
-              if ($posttags) {
-                foreach($posttags as $tag) {
-                  echo '<small><a href="'.get_tag_link($tag->term_id).'"> <i class="fa fa-tag"></i> '. $tag->name . '</a></small>'; 
+            <div class="entry-date">
+              By<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+                <?php printf( __( ' %s', 'pure-bootstrap' ), get_the_author() ); ?>
+              </a> on <?php echo get_the_date(); ?>
+            </div>
+            <div class="post-tags">
+              <?php
+                $posttags = get_the_tags();
+                if ($posttags) {
+                  foreach($posttags as $tag) {
+                    echo '<small><a href="'.get_tag_link($tag->term_id).'"> <i class="fa fa-tag"></i> '. $tag->name . '</a></small>'; 
+                  }
                 }
-              }
-            ?>
-          </div>
+              ?>
+            </div>
+          </article>
         </div>
       <?php endwhile; ?>
       <?php if (comments_open($post_id) ): ?>
