@@ -24,6 +24,30 @@ table {
   border-collapse: collapse;
   border-spacing: 0
 }
+@font-face {
+  font-family: 'SudoFX Pro Thin';
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/sudofx-pro_thin.woff") format("woff");
+}
+@font-face {
+  font-family: 'SudoFX Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/sudofx-pro_text.eot?") format("eot"), url("../fonts/sudofx-pro_text.woff") format("woff"), url("../fonts/sudofx-pro_text.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SudoFX Pro Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/sudofx-pro_semibold.woff") format("woff"), url("../fonts/sudofx-pro_semibold.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'SudoFX-Light';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/sudofx-light.woff') format('woff');
+}
 .navbar {
   margin-bottom: 0!important
 }
