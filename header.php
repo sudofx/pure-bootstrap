@@ -28,7 +28,7 @@
       <h1>
         <a href="<?php echo get_option('home'); ?>" class="site-title"><?php bloginfo('name'); ?></a>
       </h1>
-      <div class="description site-slogan">
+      <div class="description site-slogan" style="display: none;">
         <?php bloginfo('description'); ?>
       </div>
     </div>
@@ -55,6 +55,9 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand site-title" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+      <div class="description site-slogan" style="display: none;">
+        <?php bloginfo('description'); ?>
+      </div>
     </div>
     <?php
       wp_nav_menu( array(
