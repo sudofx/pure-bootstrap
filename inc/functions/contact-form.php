@@ -159,7 +159,7 @@
           <textarea name="message" id="cf-message-'. $page_id .'" class="form-control" cols="50" rows="8" placeholder="type your message here...">' . $form_data['message'] . '</textarea>
       </div>
       <div id="message-submit">
-          <input id="cf-submit-'. $page_id .'" type="submit" value="' . $placeholder_submit . '" class="btn btn-primary" name="send" id="cf-send-'. $page_id .'" />
+          <input id="cf-submit-'. $page_id .'" type="submit" value="' . $placeholder_submit . '" class="btn btn-primary" name="send" />
       </div>
     </form>';
 
