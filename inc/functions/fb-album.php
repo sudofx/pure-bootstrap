@@ -51,13 +51,13 @@
         foreach($photos as $d)
         {
           $photo  = 10;
-          $img    = format_string_for_html( $d['images'][$photo]['source'] );
-          $link   = format_string_for_html( $d['link'] );
-          $alt    = format_string_for_html( $d['name'] );
+          $img    = $this->format_string_for_html( $d['images'][$photo]['source'] );
+          $link   = $this->format_string_for_html( $d['link'] );
+          $alt    = $this->format_string_for_html( $d['name'] );
           while (!isset($img))
           {
             $photo = $photo-1;
-            $img = format_string_for_html( $d['images'][$photo]['source'] );
+            $img = $this->format_string_for_html( $d['images'][$photo]['source'] );
           }
           $photo = 10;
           $html = $html.'<a href="'.$link.'"><div data-toggle="tooltip" title="'.$alt.'" id="thumb-'.$page_id.'-'.$num.'" class="fb-thumbnail" style="background: url('.$img.') no-repeat center center; background-size: cover;"></div></a>';
