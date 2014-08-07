@@ -43,7 +43,7 @@
   <div id="nav-container" class="container">
     <nav class="navbar navbar-default" role="navigation">
 <?php else: ?>
-  <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
 <?php endif ?>
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,9 +72,9 @@
         'walker'            => new wp_bootstrap_navwalker())
       );
     ?>
-    </div>
   </div>
 </nav>
+
 <?php if ( show_header() ): ?>
   </div>
 <?php endif ?>
