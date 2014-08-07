@@ -37,6 +37,11 @@
       return $photos;
     }
 
+    public function format_string_for_html( $str )
+    {
+      $st r= str_replace( "&", "&amp;", $str );
+      return $str;
+    }
     public function process_data( $photos, $html )
     {
       $num = 1;
@@ -46,13 +51,13 @@
         foreach($photos as $d)
         {
           $photo  = 10;
-          $img    = $d['images'][$photo]['source'];
-          $link   = $d['link'];
-          $alt    = $d['name'];
+          $img    = format_string_for_html( $d['images'][$photo]['source'] );
+          $link   = format_string_for_html( $d['link'] );
+          $alt    = format_string_for_html( $d['name'] );
           while (!isset($img))
           {
             $photo = $photo-1;
-            $img = $d['images'][$photo]['source'];
+            $img = format_string_for_html( $d['images'][$photo]['source'] );
           }
           $photo = 10;
           $html = $html.'<a href="'.$link.'"><div data-toggle="tooltip" title="'.$alt.'" id="thumb-'.$page_id.'-'.$num.'" class="fb-thumbnail" style="background: url('.$img.') no-repeat center center; background-size: cover;"></div></a>';
