@@ -39,7 +39,7 @@
 
     public function format_string_for_html( $str )
     {
-      $st r= str_replace( "&", "&amp;", $str );
+      $str = str_replace( "&", "&amp;", $str );
       return $str;
     }
     public function process_data( $photos, $html )
