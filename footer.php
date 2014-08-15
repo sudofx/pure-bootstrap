@@ -27,7 +27,7 @@
       <div style="clear-both"></div>
       <div class="text-center">
       	<div class="copyright">
-          &copy;<?=date('Y')?> Copyright <?php bloginfo('name'); ?>
+          &copy;<?=date('Y')?> <?php bloginfo('name'); ?>
         </div>
       </div>
     </footer>
