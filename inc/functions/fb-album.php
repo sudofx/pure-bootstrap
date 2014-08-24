@@ -23,7 +23,7 @@
         'reverse' => false
       ), $atts );
 
-      $url = 'http://graph.facebook.com/'.$atts['album'].'/photos?limit='.$atts['limit'];
+      $url = 'https://graph.facebook.com/'.$atts['album'].'/photos?limit='.$atts['limit'];
       $data = file_get_contents( $url );
       if ($data)
       {
