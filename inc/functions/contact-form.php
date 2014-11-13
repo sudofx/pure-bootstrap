@@ -165,7 +165,9 @@
 
 
     if ( $sent == true ) {
-      return $info;
+      /* works better for forms in widgets */
+      // return $info;
+      echo $info;
     } else {
       return $info . $email_form;
     }

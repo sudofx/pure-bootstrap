@@ -210,6 +210,9 @@ nav ul li a {
 textarea {
   padding-left: 6px !important;
 }
+.modal-backdrop {
+  z-index: -1 !important; 
+}
 .full-width-featured-img, .full-width-featured-img-no-container {
   width: 100%!important;
   background-repeat: no-repeat!important;
