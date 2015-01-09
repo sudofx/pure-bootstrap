@@ -25,10 +25,10 @@ table {
   border-spacing: 0
 }
 @font-face {
-    font-family: 'SudoFX Light';
-    font-style: normal;
-    font-weight: 200;
-    src: url('../fonts/sudofx-light.woff') format('woff');
+  font-family: 'SudoFX Light';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/sudofx-light.woff') format('woff');
 }
 @font-face {
   font-family: 'SudoFX Pro Thin';
@@ -203,6 +203,10 @@ nav ul li a {
 .margin-bottom-60 {
   margin-bottom: 60px
 }
+.form-control, .contact-form textarea, .contact-form input[type=email], .contact-form input[type=text] {
+  width: 100% !important;
+  max-width: 98% !important;
+}
 #nav-container {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -211,7 +215,7 @@ textarea {
   padding-left: 6px !important;
 }
 .modal-backdrop {
-  z-index: -1 !important; 
+  z-index: -1 !important;
 }
 .full-width-featured-img, .full-width-featured-img-no-container {
   width: 100%!important;
