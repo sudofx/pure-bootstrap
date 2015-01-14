@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php bloginfo('title'); ?></title>
+<title><?php bloginfo('title'); ?> | <?php bloginfo('description'); ?></title>
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
 <!-- Pure Bootstrap WordPress theme by CornDog Computers -->
 <?php wp_enqueue_script("jquery"); ?>
