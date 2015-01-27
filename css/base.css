@@ -158,6 +158,9 @@ nav ul li a {
 .search-btn {
   min-width: 0 !important;
 }
+.padding-top-5 {
+  padding-top: 5px
+}
 .padding-top-10 {
   padding-top: 10px
 }
@@ -169,6 +172,9 @@ nav ul li a {
 }
 .padding-top-60 {
   padding-top: 60px
+}
+.padding-bottom-5 {
+  padding-bottom: 5px
 }
 .padding-bottom-10 {
   padding-bottom: 10px
@@ -182,6 +188,12 @@ nav ul li a {
 .padding-bottom-60 {
   padding-bottom: 60px
 }
+.margin-top-5 {
+  margin-top: 5px
+}
+.margin-top-10 {
+  margin-top: 10px
+}
 .margin-top-20 {
   margin-top: 20px
 }
@@ -190,6 +202,9 @@ nav ul li a {
 }
 .margin-top-60 {
   margin-top: 60px
+}
+.margin-bottom-5 {
+  margin-bottom: 5px
 }
 .margin-bottom-10 {
   margin-bottom: 10px
@@ -354,6 +369,9 @@ textarea {
 }
 .text-white {
   color: #fff!important
+}
+.text-black {
+  color: #000!important
 }
 .img-responsive {
   margin: 0 auto

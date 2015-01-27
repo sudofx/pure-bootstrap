@@ -9,6 +9,14 @@
     // Touchscreen variable
     $touchscreen = (typeof window.ontouchstart !== 'undefined');
 
+    // add bootstrap classes if they are not added
+    $('input').addClass('form-control');
+    $(':submit').removeClass('form-control');
+    $(':submit').addClass('btn');
+    $(':submit').addClass('btn-primary');
+    $(':submit').addClass('btn-rounded');
+    $('textarea').addClass('form-control');
+
     // Remove header and navbar
     if ($('.no-nav').length) {
 
