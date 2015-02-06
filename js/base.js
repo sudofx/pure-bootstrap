@@ -20,7 +20,7 @@
 
     if ($('.search-btn').length) {
       $('.search-btn').removeClass('btn-rounded');
-      $('.search-btn').css('margin-left','-5px');
+      $('.search-btn').css('margin-left', '-5px');
     }
 
     // Remove header and navbar
@@ -35,8 +35,8 @@
 
         // Only show the word "Menu" if not a touch screen
         if (!$touchscreen) {
-            html = '<i id="show-nav" class="fa fa-bars"><span class="menu-text">&nbsp;Menu</span></i>';
-            $('.nav-menu').html(html);
+          html = '<i id="show-nav" class="fa fa-bars"><span class="menu-text">&nbsp;Menu</span></i>';
+          $('.nav-menu').html(html);
         }
 
         // bind to the #show-nav click function to show fullscreen nav
@@ -47,7 +47,7 @@
           $('#navpage').addClass('bg-primary');
           $('#navpage').addClass('animated bounceInDown');
           window.setTimeout(function() {
-              $('section').css('display', 'none');
+            $('section').css('display', 'none');
           }, 500);
         });
 
@@ -56,12 +56,16 @@
           $('#navpage').removeClass('animated bounceInDown');
           $('#navpage').addClass('animated fadeOutUpBig');
           window.setTimeout(function() {
-              $('#navpage').css('z-index', '-1');
+            $('#navpage').css('z-index', '-1');
           }, 500);
         }
 
-        $('#close-nav').click(function() { closeNav(); });
-        $('.nav-menu-item').click(function() { closeNav(); });
+        $('#close-nav').click(function() {
+          closeNav();
+        });
+        $('.nav-menu-item').click(function() {
+          closeNav();
+        });
 
         if (!$touchscreen) {
           // Non-touchscreen settings
@@ -74,7 +78,7 @@
         }
       }
     }
-    
+
 
     // Add form-control class to ID comment
     if ($('#comment').length)
@@ -86,7 +90,9 @@
 
     // Add tooltips to facebook photos
     if ($('.fb-thumbnail').length)
-      $(function($) { $('.fb-thumbnail').tooltip(); });
+      $(function($) {
+        $('.fb-thumbnail').tooltip();
+      });
 
     // This is used on the custom contact form. After displaying the
     //  success modal, and the user hits "Okay", it will take them back
@@ -96,11 +102,11 @@
       return true
     })
 
-    function section_resize($w,$h) {
+    function section_resize($w, $h) {
       $('section').css('min-height', $h);
     }
 
-    function header_resize($w,$h) {
+    function header_resize($w, $h) {
       if ($w <= 768) {
         $('.navbar').addClass('navbar-fixed-top');
         $('.navbar').css('opacity', '0.96');
@@ -116,7 +122,7 @@
       }
     }
 
-    function navbar_position($w,$h) {
+    function navbar_position($w, $h) {
       if ($w <= 768) {
         $('.navbar').addClass('navbar-fixed-top');
         $('.navbar').css('opacity', '0.96');
@@ -131,10 +137,10 @@
     $(window).resize(function() {
       $h = $(window).height();
       $w = $(window).width();
-      
-      if ($('.no-nav').length) section_resize($w,$h);
-      else navbar_position($w,$h);
-      if ( $('header').length ) header_resize($w,$h);
+
+      if ($('.no-nav').length) section_resize($w, $h);
+      else navbar_position($w, $h);
+      if ($('header').length) header_resize($w, $h);
 
     });
     $(window).resize();
