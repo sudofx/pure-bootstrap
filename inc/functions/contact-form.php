@@ -144,7 +144,7 @@
           <input type="text" name="name" class="form-control" id="cf-name-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_name . '" value="' . $form_data['name'] . '" />
       </div>
       <div id="message-email">
-          <input type="text" name="email" class="form-control" id="cf-email-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_email . '" value="' . $form_data['email'] . '" />
+          <input type="email" name="email" class="form-control" id="cf-email-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_email . '" value="' . $form_data['email'] . '" />
       </div>
       <div id="message-phone">
           <input type="text" name="phone" class="form-control" id="cf-phone-'. $page_id .'" size="50" maxlength="50" placeholder="' . $placeholder_phone . '" value="' . $form_data['phone'] . '" />

@@ -17,6 +17,12 @@
     $(':submit').addClass('btn-rounded');
     $('textarea').addClass('form-control');
 
+
+    if ($('.search-btn').length) {
+      $('.search-btn').removeClass('btn-rounded');
+      $('.search-btn').css('margin-left','-5px');
+    }
+
     // Remove header and navbar
     if ($('.no-nav').length) {
 
