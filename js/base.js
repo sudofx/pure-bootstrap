@@ -43,20 +43,20 @@
         // for full-no-nav template
         $('#show-nav').click(function() {
           $('#navpage').css('z-index', '1100');
-          $('#navpage').removeClass('animated fadeOutUpBig');
           $('#navpage').addClass('bg-primary');
           $('#navpage').addClass('animated bounceInDown');
           window.setTimeout(function() {
             $('section').css('display', 'none');
+            $('#navpage').removeClass('animated fadeOutUpBig');
           }, 500);
         });
 
         function closeNav() {
           $('section').css('display', 'block');
-          $('#navpage').removeClass('animated bounceInDown');
           $('#navpage').addClass('animated fadeOutUpBig');
           window.setTimeout(function() {
             $('#navpage').css('z-index', '-1');
+            $('#navpage').removeClass('bg-primary animated bounceInDown fadeOutUpBig');
           }, 500);
         }
 

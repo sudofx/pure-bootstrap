@@ -28,7 +28,7 @@ table {
   font-family: 'SudoFX Light';
   font-style: normal;
   font-weight: 200;
-  src: url('../fonts/sudofx-light.woff') format('woff');
+  src: url("../fonts/sudofx-light.woff") format("woff");
 }
 @font-face {
   font-family: 'SudoFX Pro Thin';
