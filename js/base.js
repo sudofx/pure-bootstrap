@@ -35,7 +35,7 @@
 
         // Only show the word "Menu" if not a touch screen
         if (!$touchscreen) {
-          html = '<i id="show-nav" class="fa fa-bars"><span class="menu-text">&nbsp;Menu</span></i>';
+          html = '<span class="menu-text">Menu&nbsp;&nbsp;</span><i id="show-nav" class="fa fa-bars"></i>';
           $('.nav-menu').html(html);
         }
 
