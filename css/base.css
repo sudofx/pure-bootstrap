@@ -326,7 +326,7 @@ textarea {
   float: left;
   height: 30px;
   margin-top: 10px;
-  right: 8px;
+  right: 20px;
   cursor: pointer;
   font-size: 24px
 }
@@ -361,7 +361,7 @@ textarea {
   height: 30px;
   line-height: 40px;
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 3px
 }
 .btn-x:hover {
