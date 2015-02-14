@@ -34,10 +34,7 @@
         $('.menu-item').addClass('nav-menu-item');
 
         // Only show the word "Menu" if not a touch screen
-        if (!$touchscreen) {
-          html = '<span class="menu-text">Menu&nbsp;&nbsp;</span><i id="show-nav" class="fa fa-bars"></i>';
-          $('.nav-menu').html(html);
-        } else {
+        if ($touchscreen) {
           $('.nav-menu').css('font-size', '24px');
           $('.btn-x').css('font-size', '35px');
         }
