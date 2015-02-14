@@ -328,7 +328,7 @@ textarea {
   margin-top: 10px;
   right: 20px;
   cursor: pointer;
-  font-size: 24px
+  font-size: 18px
 }
 .nav-menu>.fa {
   cursor: pointer!important
@@ -357,7 +357,7 @@ textarea {
   cursor: pointer;
   display: block;
   font-family: 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   height: 30px;
   line-height: 40px;
   position: absolute;
@@ -507,7 +507,6 @@ article {
   .nav-menu {
     margin-top: 40px;
     right: 40px;
-    font-size: 18px
   }
   .btn-x {
     right: 37px;

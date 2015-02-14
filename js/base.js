@@ -37,6 +37,8 @@
         if (!$touchscreen) {
           html = '<span class="menu-text">Menu&nbsp;&nbsp;</span><i id="show-nav" class="fa fa-bars"></i>';
           $('.nav-menu').html(html);
+          $(".nav-menu").css("font-size", "24px !important");
+          $(".btn-x").css("font-size", "35px !important");
         }
 
         // bind to the #show-nav click function to show fullscreen nav
