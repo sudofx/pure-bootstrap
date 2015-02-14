@@ -361,8 +361,8 @@ textarea {
   height: 30px;
   line-height: 40px;
   position: absolute;
-  right: 20px;
-  top: 3px
+  right: 18px;
+  top: 4px
 }
 .btn-x:hover {
   transition: color .9s 0 ease
