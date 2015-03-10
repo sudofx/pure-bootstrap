@@ -20,10 +20,8 @@ blockquote, q {
 blockquote:after, blockquote:before, q:after, q:before {
   content: none
 }
-a,a:hover, a:active, a:focus,
-object, embed,
-input::-moz-focus-inner {
-   outline: 0;
+a, a:hover, a:active, a:focus, object, embed, input::-moz-focus-inner {
+  outline: none !important;
 }
 table {
   border-collapse: collapse;
