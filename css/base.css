@@ -20,6 +20,11 @@ blockquote, q {
 blockquote:after, blockquote:before, q:after, q:before {
   content: none
 }
+a,a:hover, a:active, a:focus,
+object, embed,
+input::-moz-focus-inner {
+   outline: 0;
+}
 table {
   border-collapse: collapse;
   border-spacing: 0
@@ -375,6 +380,10 @@ textarea {
 }
 .img-responsive {
   margin: 0 auto
+}
+.img-thumbnail > .img-responsive {
+  width: 100% !important;
+  height: auto !important;
 }
 .fb-thumbnail {
   display: inline-block;
