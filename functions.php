@@ -139,4 +139,12 @@
     add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
   }
 
+  if (function_exists('add_theme_support')) {
+    /* Jetpack infinite-scroll support */
+    add_theme_support( 'infinite-scroll', array(
+      'container' => 'content',
+      'footer' => 'page',
+    ));
+  }
+
 ?>
