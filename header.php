@@ -61,6 +61,14 @@
         <?php bloginfo('description'); ?>
       </div>
     </div>
+    <!-- navbar search -->
+    <form id="navbar-searchform" class="navbar-form navbar-right" role="search" action="<?php echo esc_url( site_url() ); ?>" method="get">
+      <div class="form-group">
+        <input id="s" name="s" type="text" class="form-control" placeholder="<?php esc_attr_e( '', 'alienship' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>">
+      </div>
+      <button id="navbar-searchsubmit" type="submit" name="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+    </form>
+    <!-- navbar menu -->
     <?php
       wp_nav_menu( array(
         'menu'              => 'primary',
