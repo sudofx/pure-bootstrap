@@ -18,12 +18,14 @@
       $photos = array();
       $data = false;
       $atts = shortcode_atts( array(
+        'token' => '',
         'album' => '',
         'limit' => 24,
         'reverse' => false
       ), $atts );
 
-      $url = 'https://graph.facebook.com/'.$atts['album'].'/photos?limit='.$atts['limit'];
+      $url = 'https://graph.facebook.com/'.$atts['album'].'/photos?access_token='.$atts['token'].'&limit='.$atts['limit'];
+      
       $data = file_get_contents( $url );
       if ($data)
       {
