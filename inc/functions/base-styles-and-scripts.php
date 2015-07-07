@@ -20,8 +20,8 @@
     $scroll_script                = $theme_dir_uri . '/js/jquery.scrollSections.min.js';
 
     /** CDNS */
-    $cdn_bs_style       = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css';
-    $cdn_bs_script      = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js';
+    $cdn_bs_style       = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css';
+    $cdn_bs_script      = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js';
     $cdn_animate_style  = '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css';
     $cdn_fa_style       = '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 
