@@ -10,8 +10,8 @@
     
     global $theme_dir_uri, $custom, $custom_dir_name, $custom_dir, $use_cdn;
 
-    $custom_bootstrap_stylesheet  = $custom.'.bootstrap.css';
-    $custom_bootstrap_script      = $custom.'.bootstrap.js';
+    $custom_bootstrap_style       = $custom . '.bootstrap.css';
+    $custom_bootstrap_script      = $custom . '.bootstrap.js';
     $bs_style                     = $theme_dir_uri . '/css/bootstrap.min.css';
     $bs_script                    = $theme_dir_uri . '/js/bootstrap.min.js';
     $animate_style                = $theme_dir_uri . '/css/animate.min.css';
@@ -22,20 +22,20 @@
     /** CDNS */
     $cdn_bs_style       = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css';
     $cdn_bs_script      = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js';
-    $cdn_animate_style  = '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css';
     $cdn_fa_style       = '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+    $cdn_animate_style  = '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css';
 
     /** set $use_cdn in custom_functions.php */
     if ($use_cdn) {
-      $bs_style       = $cdn_bs_style;
-      $bs_script      = $cdn_bs_script;
-      $animate_style  = $cdn_animate_style;
-      $fa_style       = $cdn_fa_style;
+        $bs_style       = $cdn_bs_style;
+        $bs_script      = $cdn_bs_script;
+        $animate_style  = $cdn_animate_style;
+        $fa_style       = $cdn_fa_style;
     }
 
     /* Custom bootstrap */
-    if ( file_exists($custom_dir.'/'.$custom_bootstrap_stylesheet) )
-      wp_enqueue_style( 'custom-bootstrap-stylesheet', $theme_dir_uri . '/' . $custom_dir_name . '/' . $custom_bootstrap_stylesheet, false  );
+    if ( file_exists($custom_dir.'/'.$custom_bootstrap_style) )
+      wp_enqueue_style( 'custom-bootstrap-stylesheet', $theme_dir_uri . '/' . $custom_dir_name . '/' . $custom_bootstrap_style, false  );
     else
       wp_enqueue_style( 'bootstrap-stylesheet', $bs_style, false );
 

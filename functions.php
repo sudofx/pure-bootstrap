@@ -79,8 +79,8 @@
   ========================================================================== */
   /**
    * Facebook album shortcode examples:
-   * [fb-album album=156033841132513 limit=20]
-   * [fb-album album=156033841132513 limit=20 reverse=true]
+   * [fb-album token=YOUR_ACCESS_TOKEN album=156033841132513 limit=20]
+   * [fb-album token=YOUR_ACCESS_TOKEN album=156033841132513 limit=20 reverse=true]
    */
   include('inc/functions/fb-album.php');
 
