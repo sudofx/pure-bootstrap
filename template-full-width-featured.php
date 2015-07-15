@@ -15,7 +15,7 @@ get_header(); ?>
         <?php if ( has_post_thumbnail()) : ?>
           <div class="img-thumbnail" style="width: 100%;">
               <?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'larger'); ?>
-              <div id="featured-image" class="full-width-featured-img img-thumbnail" style="background: url(<?php echo $image_url[0];?>)"></div>
+              <div id=<?php echo '"featured-image-' . get_post_thumbnail_id($post->ID) .'"' ?> class="full-width-featured-img img-thumbnail" style="background: url(<?php echo $image_url[0];?>)"></div>
             <?php endif; ?>
           </div>
         <div class="padding-top-20 padding-bottom-20">
