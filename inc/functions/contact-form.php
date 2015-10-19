@@ -1,12 +1,14 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * credit: http://code.tutsplus.com/articles/creating-a-simple-contact-form-for-simple-needs--wp-27893
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+     *  Theme: Pure Bootstrap
+     *  credit: http://code.tutsplus.com/articles/creating-a-simple-contact-form-for-simple-needs--wp-27893
+     *  @package Pure Bootstrap
+     *  @since   Pure Bootstrap 1.1
+     */
 
-    function get_the_ip() {
+    // void (void)
+    function get_the_ip()
+    {
         if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
             return $_SERVER["HTTP_X_FORWARDED_FOR"];
         }
@@ -18,7 +20,9 @@
         }
     }
 
-    function pure_bootstrap_contact_form( $atts ) {
+    // string (array)
+    function pure_bootstrap_contact_form( $atts )
+    {
         $sent = false;
         $page_id = get_the_ID();
         $info = '';
@@ -173,9 +177,6 @@
         }
 
     }
-
-
-
 
     add_shortcode( 'contact', 'pure_bootstrap_contact_form' );
 ?>
