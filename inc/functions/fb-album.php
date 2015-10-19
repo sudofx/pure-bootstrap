@@ -7,12 +7,12 @@
 
     class FacebookAlbum
     {
-
         public function __construct()
         {
             add_shortcode( 'fb-album', array( $this, 'fb_album_shortcode') );
         }
 
+        // array (array)
         public function get_photos( $atts )
         {
             $photos = array();
@@ -39,6 +39,7 @@
             return $photos;
         }
 
+        // string (array, string)
         public function process_data( $photos, $html )
         {
             $num = 1;
@@ -64,6 +65,7 @@
             return $html;
         }
 
+        // string (array)
         public function fb_album_shortcode( $atts )
         {
             $html = '<div id="fb-album-id-'.$atts['album'].'" class="fb-album text-center">';
@@ -72,7 +74,6 @@
             return $html.'</div>';
         }
     }
-
 
     $fb_album = new FacebookAlbum();
 ?>
