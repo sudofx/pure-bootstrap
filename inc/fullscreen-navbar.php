@@ -4,7 +4,7 @@
   * Navpage for no-navbar page (sections)
   *
   * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.0
+  * @since   Pure Bootstrap 1.1
   */
 ?>
 

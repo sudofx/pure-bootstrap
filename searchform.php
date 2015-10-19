@@ -5,7 +5,7 @@
      * This is the template that displays the search form.
      *
      * @package Pure Bootstrap
-     * @since   Pure Bootstrap 1.0
+     * @since   Pure Bootstrap 1.1
      */
 ?>
 

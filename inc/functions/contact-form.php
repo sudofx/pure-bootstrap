@@ -3,7 +3,7 @@
   * Theme: Pure Bootstrap
   * credit: http://code.tutsplus.com/articles/creating-a-simple-contact-form-for-simple-needs--wp-27893
   * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.0
+  * @since   Pure Bootstrap 1.1
   */
 
     function get_the_ip() {

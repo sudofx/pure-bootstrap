@@ -5,7 +5,7 @@
   * Displays all of the <head> section and everything up till <div id="content">
   *
   * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.0
+  * @since   Pure Bootstrap 1.1
   */
 ?><!DOCTYPE html>
 <html>

@@ -11,7 +11,7 @@
   * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
   *
   * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.0
+  * @since   Pure Bootstrap 1.1
   */
 
 class wp_bootstrap_navwalker extends Walker_Nav_Menu {

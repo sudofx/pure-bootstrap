@@ -6,7 +6,7 @@
   * Template Name: Full - No Navigation
   *
   * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.0
+  * @since   Pure Bootstrap 1.1
   */
 get_header(); ?>
     <?php fullscreen_nav(); ?>
