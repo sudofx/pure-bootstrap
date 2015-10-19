@@ -1,12 +1,11 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * The template for displaying the footer.
-  * Contains the closing of the #content div and all content after
-  *
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   The template for displaying the footer.
+    *   Contains the closing of the #content div and all content after
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 ?>
         </div>
         <footer>

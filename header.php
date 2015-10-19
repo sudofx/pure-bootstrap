@@ -1,12 +1,11 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * The template for displaying the header.
-  * Displays all of the <head> section and everything up till <div id="content">
-  *
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   The template for displaying the header.
+    *   Displays all of the <head> section and everything up till <div id="content">
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 ?><!DOCTYPE html>
 <html>
 <head>

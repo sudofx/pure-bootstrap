@@ -1,12 +1,12 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * The archive page template.
-  * This is the template that displays an archive month.
-  *
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   The archive page template.
+    *   This is the template that displays an archive month.
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
+
 get_header(); ?>
     <div class="container main-content default-page">
         <div id="content" class="col-sm-9 col-md-9">

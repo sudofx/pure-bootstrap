@@ -1,9 +1,9 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 
     /**
     * This function is used to check for the custom directory. If it doesn't

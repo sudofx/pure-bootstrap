@@ -1,9 +1,9 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 
     if ( function_exists('register_nav_menus') ) {
         /* Menu options for the theme */

@@ -1,9 +1,9 @@
 <?php
     /**
-     *  Theme: Pure Bootstrap
-     *  @package Pure Bootstrap
-     *  @since   Pure Bootstrap 1.1
-     */
+    *   Theme: Pure Bootstrap
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 
     // void (void)
     function third_party_scripts()

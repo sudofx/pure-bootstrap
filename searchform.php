@@ -1,12 +1,11 @@
 <?php
     /**
-     * Theme: Pure Bootstrap
-     * The search form template.
-     * This is the template that displays the search form.
-     *
-     * @package Pure Bootstrap
-     * @since   Pure Bootstrap 1.1
-     */
+    *   Theme: Pure Bootstrap
+    *   The search form template.
+    *   This is the template that displays the search form.
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 ?>
 
 <?php

@@ -1,11 +1,9 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * Navpage for no-navbar page (sections)
-  *
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 ?>
 
 <div id="navpage">

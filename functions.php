@@ -1,11 +1,10 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * Theme functions file
-  *
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   Theme functions file
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 
     /** custom folder */
     $theme_dir_uri = get_template_directory_uri();

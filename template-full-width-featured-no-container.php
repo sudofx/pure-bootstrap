@@ -1,13 +1,12 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * The full page width template.
-  * This is the template that displays all pages by default.
-  * Template Name: Full - Featured Image No Container
-  *
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+    *   Theme: Pure Bootstrap
+    *   The full page width template.
+    *   This is the template that displays all pages by default.
+    *   Template Name: Full - Featured Image No Container
+    *   @package Pure Bootstrap
+    *   @since   Pure Bootstrap 1.1
+    */
 get_header(); ?>
     <div class="main-content">
         <?php while(have_posts()): the_post() ?>
