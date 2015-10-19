@@ -12,8 +12,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title><?php bloginfo('title'); ?> | <?php
-    if (!is_front_page()) echo single_post_title();
-    else bloginfo('description');
+    if (!is_front_page()) {
+        echo single_post_title();
+    }
+    else {
+        bloginfo('description');
+    }
 ?></title>
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
 <!-- Pure Bootstrap WordPress theme by sudoFx -->
