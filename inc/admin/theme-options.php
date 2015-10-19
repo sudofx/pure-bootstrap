@@ -1,21 +1,22 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+     *  Theme: Pure Bootstrap
+     *  @package Pure Bootstrap
+     *  @since   Pure Bootstrap 1.1
+     */
 
     global $custom_style, $custom_script;
+
     class ThemeOptions
     {
         /** Holds the values to be used in the fields callbacks */
         private $options;
         public $style;
-        //public $script = $custom_script;
 
-        /** Start up */
+        // void (string, string)
         public function __construct($st, $sc)
         {
+            /** Start up */
             $this->style = $st;
             $this->script = $sc;
 
@@ -29,10 +30,13 @@
             add_action( 'admin_init', array( $this, 'page_init' ) );
         }
 
-        /** Add options page */
+        // void (void)
         public function add_theme_options_page()
         {
-            // This page will be under "Settings"
+            /**
+             *  Add options page
+             *  This page will be under "Settings"
+             */
             add_theme_page(
                 'Theme Options',
                 'Theme Options',
@@ -42,28 +46,34 @@
             );
         }
 
-        /** clean the strings before saving to file */
-        public function string_clean( $str ) {
+        // string (string)
+        public function string_clean( $str )
+        {
+            /** clean the strings before saving to file */
             $str = str_replace('\"', '"', $str);
             $str = str_replace("\'", "'", $str);
             return $str;
         }
 
-        /** read out the custom file to the textarea */
-        public function read_custom_file( $file ) {
+        // string (string)
+        public function read_custom_file( $file )
+        {
+            /** read out the custom file to the textarea */
             return fread( fopen($file, 'r'), filesize($file) );
         }
 
-        /** write the custom file from the textarea */
-        public function write_custom_file( $file, $contents ) {
+        // void (string, string)
+        public function write_custom_file( $file, $contents )
+        {
+            /** write the custom file from the textarea */
             copy($file, $file.'.bak');
             file_put_contents( $file, $this->string_clean($contents), LOCK_EX );
         }
 
-        /** Options page callback */
+        // void (void)
         public function create_theme_admin_page()
         {
-            // Set class property
+            /** Options page callback */
             $this->options = get_option( 'pure_bootstrap_option' );
             ?>
             <style>
@@ -112,9 +122,10 @@
             <?php
         }
 
-        /** Register and add settings */
+        // void (void)
         public function page_init()
         {
+            /** Register and add settings */
             register_setting(
                 'pure_bootstrap_option_group', // Option group
                 'pure_bootstrap_option', // Option name
@@ -137,13 +148,14 @@
             );
         }
 
-        /**
-          * Sanitize each setting field as needed
-          *
-          * @param array $input Contains all settings fields as array keys
-          */
+        // array (array)
         public function sanitize( $input )
         {
+            /**
+             *  Sanitize each setting field as needed
+             *
+             *  @param array $input Contains all settings fields as array keys
+             */
             $new_input = array();
             if( isset( $input['show_header'] ) )
                 $new_input['show_header'] = $input['show_header'];
@@ -151,15 +163,17 @@
             return $new_input;
         }
 
-        /** Print the Section text */
+        // void (void)
         public function print_section_info()
         {
+            /** Print the Section text */
             print '';
         }
 
-        /** Get the settings option array and print one of its values */
+        // void (void)
         public function show_header_callback()
         {
+            /** Get the settings option array and print one of its values */
             printf(
                 '<input type="checkbox" id="show_header" name="pure_bootstrap_option[show_header]" value="%s" %s/>',
                 isset( $this->options['show_header'] ) ? 1:0,
@@ -171,7 +185,4 @@
     if ( is_admin() ) {
         $theme_options = new ThemeOptions($custom_style, $custom_script);
     }
-
-
-
 ?>
