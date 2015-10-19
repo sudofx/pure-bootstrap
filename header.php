@@ -16,7 +16,7 @@
     else bloginfo('description');
 ?></title>
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-<!-- Pure Bootstrap WordPress theme by CornDog Computers -->
+<!-- Pure Bootstrap WordPress theme by sudoFx -->
 <?php wp_enqueue_script("jquery"); ?>
 <?php wp_head(); ?>
 </head>
