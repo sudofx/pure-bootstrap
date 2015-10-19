@@ -21,8 +21,9 @@
     $custom_functions       = $custom_dir . '/'. $custom_functions_file;
 
     /** include the users custom functions */
-    if ( file_exists($custom_functions) )
+    if ( file_exists($custom_functions) ) {
         include( $custom_functions );
+    }
 
     /** custom navwalker for bootstrap navbar */
     require_once('inc/wp_bootstrap_navwalker.php');
@@ -37,8 +38,11 @@
 
     /** start basic wp overides
     ========================================================================== */
-    // delay feed update
-    function publish_later_on_feed($where) {
+
+    // string (string)
+    function publish_later_on_feed($where)
+    {
+        /** delay feed update */
         global $wpdb;
         if (is_feed()) {
             // timestamp in WP-format
@@ -98,36 +102,45 @@
     include('inc/functions/widgets.php');
 
 
-    /** If no featured image is set, get the theme image placeholder */
-    function get_thumbnail_or_placeholder() {
+    // void (void)
+    function get_thumbnail_or_placeholder()
+    {
+        /** If no featured image is set, get the theme image placeholder */
         $featured_image = get_template_directory_uri() . '/img/featured-placeholder.jpg';
         if ( has_post_thumbnail()) the_post_thumbnail('large', array('class' => 'img-responsive'));
         else echo '<img src="'.$featured_image.'" alt="no featured image" class="img-responsive">';
     }
 
 
-    /** This is the nave for the full-screen-no-nav template */
-    function fullscreen_nav() {
+    // void (void)
+    function fullscreen_nav()
+    {
+        /** This is the nave for the full-screen-no-nav template */
         include('inc/fullscreen-navbar.php');
     }
 
 
-    /** Use CDNs */
-    function use_cdn() {
+    // bool (void)
+    function use_cdn()
+    {
+        /** Use CDNs */
         return get_option( 'pure_bootstrap_option', 'use_cdn' );
     }
 
 
-    /** Theme option to show header. */
-    function show_header() {
+    // bool (void)
+    function show_header()
+    {
+        /** Theme option to show header. */
         return get_option( 'pure_bootstrap_option', 'show_header' );
     }
 
-    /*
-      * Custom excerpt length
-      * ======================================================================= */
-    function custom_excerpt_length( $length ) {
-        return 35;
+    // int (int)
+    function custom_excerpt_length( $length )
+    {
+        /** Custom excerpt length */
+        // return 35; // may ghage this back
+        return $length;
     }
 
     /*
