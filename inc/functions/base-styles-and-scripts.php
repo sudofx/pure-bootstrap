@@ -1,13 +1,14 @@
 <?php
-/**
-  * Theme: Pure Bootstrap
-  * @package Pure Bootstrap
-  * @since   Pure Bootstrap 1.1
-  */
+    /**
+     *  Theme: Pure Bootstrap
+     *  @package Pure Bootstrap
+     *  @since   Pure Bootstrap 1.1
+     */
 
-    /* Que third party scripts and stylesheets */
-    function third_party_scripts() {
-
+    // void (void)
+    function third_party_scripts()
+    {
+        /* Que third party scripts and stylesheets */
         global $theme_dir_uri, $custom, $custom_dir_name, $custom_dir, $use_cdn;
 
         $custom_bootstrap_style       = $custom . '.bootstrap.css';
@@ -27,22 +28,26 @@
 
         /** set $use_cdn in custom_functions.php */
         if ($use_cdn) {
-                $bs_style       = $cdn_bs_style;
-                $bs_script      = $cdn_bs_script;
-                $animate_style  = $cdn_animate_style;
-                $fa_style       = $cdn_fa_style;
+            $bs_style       = $cdn_bs_style;
+            $bs_script      = $cdn_bs_script;
+            $animate_style  = $cdn_animate_style;
+            $fa_style       = $cdn_fa_style;
         }
 
         /* Custom bootstrap */
-        if ( file_exists($custom_dir.'/'.$custom_bootstrap_style) )
+        if ( file_exists($custom_dir.'/'.$custom_bootstrap_style) ) {
             wp_enqueue_style( 'custom-bootstrap-stylesheet', $theme_dir_uri . '/' . $custom_dir_name . '/' . $custom_bootstrap_style, false  );
-        else
+        }
+        else {
             wp_enqueue_style( 'bootstrap-stylesheet', $bs_style, false );
+        }
 
-        if ( file_exists($custom_dir.'/'.$custom_bootstrap_script) )
+        if ( file_exists($custom_dir.'/'.$custom_bootstrap_script) ) {
             wp_enqueue_script( 'custom-bootstrap-script', $theme_dir_uri . '/' . $custom_dir_name . '/' . $custom_bootstrap_script, array('jquery') );
-        else
+        }
+        else {
             wp_enqueue_script( 'bootstrap-script', $bs_script, array('jquery') );
+        }
 
 
         wp_enqueue_style( 'animate-stylesheet', $animate_style, false );
@@ -54,14 +59,18 @@
         }
     }
 
-    /* Que theme base scripts and stylesheets */
-    function base_scripts() {
+    // void (void)
+    function base_scripts()
+    {
+        /* Que theme base scripts and stylesheets */
         global $theme_dir_uri;
         wp_enqueue_script( 'base-script', $theme_dir_uri . '/js/base.min.js', array('jquery') );
     }
 
-    // Add IE8 conditional html5shiv.js and respond.js to header.
-    function add_ie_html5_shim () {
+    // void (void)
+    function add_ie_html5_shim ()
+    {
+        /** Add IE8 conditional html5shiv.js and respond.js to header. */
         global $theme_dir_uri;
         echo '<!--[if lt IE 9]><script type="text/javascript" src="'. $theme_dir_uri .'/js/html5shiv.min.js"></script><script type="text/javascript" src="'. $theme_dir_uri .'/js/respond.min.js"></script><![endif]-->';
     }
