@@ -153,12 +153,12 @@
         {
             /**
              *  Sanitize each setting field as needed
-             *
              *  @param array $input Contains all settings fields as array keys
              */
             $new_input = array();
-            if( isset( $input['show_header'] ) )
+            if ( isset($input['show_header']) ) {
                 $new_input['show_header'] = $input['show_header'];
+            }
 
             return $new_input;
         }
