@@ -68,7 +68,7 @@
     }
 
     // void (void)
-    function add_ie_html5_shim ()
+    function add_ie_html5_shim()
     {
         /** Add IE8 conditional html5shiv.js and respond.js to header. */
         global $theme_dir_uri;
