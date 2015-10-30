@@ -5,7 +5,7 @@
     *   This is the template that displays all pages by default.
     *   Template Name: Full - Featured Image
     *   @package Pure Bootstrap
-    *   @since   Pure Bootstrap 1.1
+    *   @version Pure Bootstrap 1.1.1
     */
 get_header(); ?>
     <div class="container main-content default-page">

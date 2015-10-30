@@ -3,7 +3,7 @@
     *   Theme: Pure Bootstrap
     *   Theme functions file
     *   @package Pure Bootstrap
-    *   @since   Pure Bootstrap 1.1
+    *   @version Pure Bootstrap 1.1.1
     */
 
     /** custom folder */

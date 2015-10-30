@@ -4,7 +4,7 @@
     *   The template for displaying the sidebar.
     *   Displays the sidebar content
     *   @package Pure Bootstrap
-    *   @since   Pure Bootstrap 1.1
+    *   @version Pure Bootstrap 1.1.1
     */
 ?>
 <div id="sidebar" class="col-sm-3 col-md-3">

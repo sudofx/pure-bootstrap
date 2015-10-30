@@ -2,7 +2,7 @@
     /**
     *   Theme: Pure Bootstrap
     *   @package Pure Bootstrap
-    *   @since   Pure Bootstrap 1.1
+    *   @version Pure Bootstrap 1.1.1
     */
 
     if ( function_exists('register_sidebar') ) {

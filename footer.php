@@ -4,7 +4,7 @@
     *   The template for displaying the footer.
     *   Contains the closing of the #content div and all content after
     *   @package Pure Bootstrap
-    *   @since   Pure Bootstrap 1.1
+    *   @version Pure Bootstrap 1.1.1
     */
 ?>
         </div>

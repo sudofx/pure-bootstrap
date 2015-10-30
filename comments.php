@@ -3,7 +3,7 @@
     *   Theme: Pure Bootstrap
     *   The template for displaying the comments.
     *   @package Pure Bootstrap
-    *   @since   Pure Bootstrap 1.1
+    *   @version Pure Bootstrap 1.1.1
     */
 ?>
 <div class="well">
