@@ -24,13 +24,14 @@
                 'reverse' => false
             ), $atts );
 
-            $url = 'https://graph.facebook.com/'.$atts['album'].'/photos?access_token='.$atts['token'].'&limit='.$atts['limit'];
+            $fields = 'photos.limit('.$atts['limit'].'){name,width,height,link,images}';
+            $url = 'https://graph.facebook.com/v2.6/'.$atts['album'].'/?fields='.urlencode($fields).'&access_token='.$atts['token'];
 
             $data = file_get_contents( $url );
             if ($data)
             {
                 $dataArr = json_decode($data, true);
-                $photos = $dataArr['data'];
+                $photos = $dataArr['photos']['data'];
 
                 /** reverse the array */
                 if ($atts['reverse'])
